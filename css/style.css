@@ -1318,7 +1318,6 @@ input[type=range]:focus::-ms-fill-upper {
   }
 
   .hero {
-    background-position: 60%;
     height: 100vh;
   }
   .hero__container {
