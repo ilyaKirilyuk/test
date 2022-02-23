@@ -1,0 +1,36 @@
+.nav {
+    &__list {
+      display: flex;
+      
+    }
+  
+    &__item {
+      &:not(:last-child) {
+        margin-right: 60px;
+      }
+    }
+  
+    &__link {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: var(--inverted);
+      transition: color 0.3s ease;
+      &_active {
+        color: var(--accent);
+      }
+      &:hover {
+        color: var(--accent);
+      }
+
+      &:active {
+        color: var(--active);
+      }
+    }
+  }
+
+  .burger-btn {
+    display: none;
+  }

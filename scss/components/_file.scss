@@ -1,0 +1,40 @@
+.file__item {
+  position: relative;
+}
+.file__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  font-size: 0;
+  cursor: pointer;
+}
+.file__button {
+  display: flex;
+  min-height: 45px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+  background: #ffffff;
+  border: 2px solid #3e9cdc;
+  border-radius: 3px;
+
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  color: #272733;
+ 
+  &::before {
+    content: "";
+    width: 17px;
+    height: 20px;
+    background: url("../../img/svg/sprite.svg#document") no-repeat ;
+    background-size: 50px;
+    padding-right: 20px;
+  }
+}

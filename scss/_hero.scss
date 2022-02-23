@@ -1,0 +1,39 @@
+@import "./components/_btn.scss";
+@import "./components/_page-title.scss";
+@import "./components/_discription.scss";
+
+.hero {
+  background: url("../img/webp/jpg/hero-bg.webp");
+  background-size: cover;
+  background-attachment: fixed;
+  &__container {
+    padding-top: 203px;
+    padding-bottom: 202px;
+  }
+
+  &__title {
+    max-width: 780px;
+    margin-bottom: 80px;
+  }
+
+
+
+  &__discription-wrapper {
+    margin-bottom: 80px;
+  }
+
+  &__btn-wrapper {
+    max-width: 396px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__btn {
+    flex: 1 0 auto;
+    text-align: center;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}

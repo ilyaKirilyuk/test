@@ -1,0 +1,233 @@
+@media (max-width: 992px) {
+  .page-title,
+  .section-title,
+  .logo {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .burger-btn {
+    display: block;
+    position: relative;
+    z-index: 20;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__line {
+      width: 100%;
+      height: 3px;
+      background: #fff;
+    }
+    .burger-btn__line {
+      transition: transform 0.3s ease;
+    }
+    &._active {
+      .burger-btn__line-one {
+        transform: rotate(45deg);
+      }
+      .burger-btn__line-two {
+        transform: scale(0);
+      }
+      .burger-btn__line-three {
+        transform: rotate(-45deg) translate(12px, -12px);
+      }
+    }
+  }
+  .header {
+    &__container {
+      padding-top: 22.5px;
+      padding-bottom: 22.5px;
+    }
+    &__nav {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      &._active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &__nav-list {
+      background: var(--header);
+      flex-direction: column;
+      height: 100%;
+      max-width: fit-content;
+      padding: 60px;
+      padding-top: 100px;
+      margin-left: auto;
+    }
+    &__nav-item {
+      margin-bottom: 20px;
+    }
+  }
+
+  .hero {
+    &__container {
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
+    &__title {
+      margin-bottom: 50px;
+    }
+
+    &__discription-wrapper {
+      margin-bottom: 60px;
+    }
+  }
+
+  .registration {
+    &__icon-wrapper {
+      &::after {
+        display: none;
+      }
+    }
+    &__content-list {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    &__content-item {
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+    &__input-group {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .footer {
+    &__container {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    &__copyright {
+      margin-bottom: 20px;
+    }
+    &__payments-list {
+      border-left: none;
+      border-right: none;
+      margin-bottom: 20px;
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .page-title,
+  .section-title,
+  .logo {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .hero {
+    &__container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    height: 100vh;
+  }
+  .discription {
+    &__title,
+    &__text {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+  .registration {
+    &__section-tile {
+      margin-bottom: 15px;
+    }
+    &__container {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    &__content-list {
+      margin-bottom: 10px;
+    }
+    &__input-group {
+      &-one {
+        flex-direction: column;
+      }
+    }
+    &__input-wrapper_width {
+      width: 100%;
+    }
+
+    &__label {
+      max-width: 220px;
+    }
+    &__input-wrapper-file {
+      max-width: none;
+      width: 100%;
+    }
+    &__btn {
+      width: 100%;
+    }
+
+    &__discription {
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 40px;
+    }
+
+    &__icon-wrapper {
+        width: 70px;
+        height: 70px;
+        &::before {
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    &__input {
+        font-size: 16px;
+        line-height: 20px;
+    }
+  }
+
+  .select {
+      &__value {
+          font-size: 16px;
+          line-height: 18px;
+      }
+
+      &__options {
+        font-size: 16px;
+        line-height: 36px
+      }
+  }
+
+  .footer {
+    &__container {
+      flex-direction: column;
+    }
+    &__payments-list {
+      flex-direction: column;
+    }
+    &__item {
+      margin-bottom: 5px;
+    }
+    &__contacts-list {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    &__contacts-item {
+      margin-bottom: 5px;
+    }
+  }
+}

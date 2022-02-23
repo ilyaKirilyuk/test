@@ -1,0 +1,23 @@
+.discription {
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--text);
+  }
+
+  &__list {
+    font-weight: 700;
+    padding-left: 10px;
+    list-style-type: "– ";
+  }
+
+  &__item {
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
