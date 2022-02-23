@@ -8,6 +8,8 @@
     border: 1px solid #ffffff;
     border-radius: 3px;
     transition: background 0.1s ease, color 0.3s ease;
+    color: var(--text);
+
   }
   &__value {
     display: flex;
@@ -37,7 +39,6 @@
     transform: rotate(-45deg);
   }
   &__options {
-    color: #000;
     display: none;
     position: absolute;
     top: 48px;

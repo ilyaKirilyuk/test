@@ -20,7 +20,7 @@
   &__discription {
     font-size: 18px;
     line-height: 22px;
-    color: #bbbbbb;
+    color: var(--second-text);
     text-align: center;
     margin-bottom: 80px;
   }
@@ -123,14 +123,14 @@
   &__input {
     font-size: 18px;
     line-height: 22px;
-    color: #272733;
+    color: var(--text);
     padding: 12px;
     background: rgba(255, 255, 255, 0.85);
-    border: 1px solid #ffffff;
+    border: 1px solid var(--inverted);
     border-radius: 3px;
     width: 100%;
     &::placeholder {
-      color: #272733;
+      color: var(--text);
     }
   }
 
@@ -143,14 +143,14 @@
   &__label {
     font-size: 18px;
     line-height: 22px;
-    color: #ffffff;
+    color: var(--inverted);
   }
 
   &__range-percent {
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--inverted);
     width: 46px;
   }
 
