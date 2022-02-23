@@ -129,6 +129,7 @@
     line-height: 28px;
   }
   .hero {
+    background-position: 60%;
     &__container {
       height: 100%;
       display: flex;
@@ -136,6 +137,7 @@
       justify-content: center;
       padding-top: 100px;
       padding-bottom: 100px;
+      
     }
     height: 100vh;
   }
@@ -147,6 +149,8 @@
     }
   }
   .registration {
+
+    background-size: inherit;
     &__section-tile {
       margin-bottom: 15px;
     }

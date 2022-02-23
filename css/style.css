@@ -543,7 +543,7 @@ body {
 }
 
 .hero {
-  background: url("../img/webp/jpg/hero-bg.webp");
+  background: url("../img/jpg/hero-bg.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -868,7 +868,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .registration {
-  background: #272733 url("../img/webp/jpg/registration-bg.webp");
+  background: #272733 url("../img/jpg/registration-bg.png");
   background-size: cover;
 }
 .registration__container {
@@ -1318,6 +1318,7 @@ input[type=range]:focus::-ms-fill-upper {
   }
 
   .hero {
+    background-position: 60%;
     height: 100vh;
   }
   .hero__container {
@@ -1341,6 +1342,9 @@ input[type=range]:focus::-ms-fill-upper {
     line-height: 18px;
   }
 
+  .registration {
+    background-size: inherit;
+  }
   .registration__section-tile {
     margin-bottom: 15px;
   }
