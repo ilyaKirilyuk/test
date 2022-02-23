@@ -16,27 +16,27 @@
           LoremIpsum.<span class="accent-text">Net</span>
         </a>
         <div class="header__nav-wrapper">
-            <button class="burger-btn">
-                <span class="burger-btn__line burger-btn__line-one"></span>
-                <span class="burger-btn__line burger-btn__line-two"></span>
-                <span class="burger-btn__line burger-btn__line-three"></span>
-            </button>
-            <nav class="nav header__nav">
-                <ul class="nav__list header__nav-list">
-                  <li class="nav__item header__nav-item">
-                    <a href="#" class="nav__link nav__link_active"> Бизнес </a>
-                  </li>
-                  <li class="nav__item header__nav-item">
-                    <a href="#" class="nav__link"> О нас </a>
-                  </li>
-                  <li class="nav__item header__nav-item">
-                    <a href="#" class="nav__link"> Цены </a>
-                  </li>
-                  <li class="nav__item header__nav-item">
-                    <a href="#" class="nav__link"> Оформить заказ </a>
-                  </li>
-                </ul>
-              </nav>
+          <button class="burger-btn">
+            <span class="burger-btn__line burger-btn__line-one"></span>
+            <span class="burger-btn__line burger-btn__line-two"></span>
+            <span class="burger-btn__line burger-btn__line-three"></span>
+          </button>
+          <nav class="nav header__nav">
+            <ul class="nav__list header__nav-list">
+              <li class="nav__item header__nav-item">
+                <a href="#" class="nav__link nav__link_active"> Бизнес </a>
+              </li>
+              <li class="nav__item header__nav-item">
+                <a href="#" class="nav__link"> О нас </a>
+              </li>
+              <li class="nav__item header__nav-item">
+                <a href="#" class="nav__link"> Цены </a>
+              </li>
+              <li class="nav__item header__nav-item">
+                <a href="#" class="nav__link"> Оформить заказ </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>
@@ -130,8 +130,12 @@
             </li>
           </ul>
           <form class="registration__form">
-            <div class="registration__input-group registration__input-group-one">
-              <div class="registration__input-wrapper registration__input-wrapper_width">
+            <div
+              class="registration__input-group registration__input-group-one"
+            >
+              <div
+                class="registration__input-wrapper registration__input-wrapper_width"
+              >
                 <select name="type of system" class="form__select">
                   <option value="disabled" disabled selected>
                     Выберите тип системы
@@ -148,7 +152,9 @@
                   <option value="rerum">Itaque earum rerum</option>
                 </select>
               </div>
-              <div class="registration__input-wrapper registration__input-wrapper_width">
+              <div
+                class="registration__input-wrapper registration__input-wrapper_width"
+              >
                 <input
                   class="registration__input"
                   type="email"
@@ -156,7 +162,9 @@
                   placeholder="Ваш e-mail"
                 />
               </div>
-              <div class="registration__input-wrapper registration__input-wrapper_width">
+              <div
+                class="registration__input-wrapper registration__input-wrapper_width"
+              >
                 <input
                   class="registration__input"
                   type="text"
@@ -196,10 +204,11 @@
                       name="image"
                       class="file__input"
                     />
-                    <label for="file" class="file__button"
-                      ><span class="file__text">
-                        Прикрепить файл
-                      </span></label
+                    <label for="file" class="file__button">
+                      <svg class="file__icon-box">
+                        <use xlink:href="./img/svg/sprite.svg#document"></use>
+                      </svg>
+                      <span class="file__text"> Прикрепить файл </span></label
                     >
                   </div>
                 </div>
@@ -219,33 +228,40 @@
           © 2018 «LoremIpsum.net» Все права защищены.
         </span>
         <ul class="footer__payments-list">
-            <li class="footer__item">
-                <span class="footer__text footer__text_qiwi">
-                    Qiwi wallet
-                </span>
-            </li>
-            <li class="footer__item">
-                <span class="footer__text footer__text_yandex">
-                    Yandex Money
-                </span>
-            </li>
-            <li class="footer__item">
-                <span class="footer__text footer__text_wm">
-                    Web Money
-                </span>
-            </li>
+          <li class="footer__item">
+            <svg class="footer__icon-box">
+              <use xlink:href="./img/svg/sprite.svg#qiwi"></use>
+            </svg>
+            <span class="footer__text"> Qiwi wallet </span>
+          </li>
+          <li class="footer__item">
+            <svg class="footer__icon-box">
+              <use xlink:href="./img/svg/sprite.svg#yandexMoney"></use>
+            </svg>
+            <span class="footer__text"> Yandex Money </span>
+          </li>
+          <li class="footer__item">
+            <svg class="footer__icon-box">
+              <use xlink:href="./img/svg/sprite.svg#webMoney"></use>
+            </svg>
+            <span class="footer__text"> Web Money </span>
+          </li>
         </ul>
         <ul class="footer__contacts-list">
-            <li class="footer__contacts-item">
-                <a href="mailto:info@ipsum228.com" class="footer__contacts-link footer__contacts-link_mail">
-                    info@ipsum228.com
-                </a>
-            </li>
-            <li class="footer__contacts-item">
-                <a href="#" class="footer__contacts-link footer__contacts-link_vk">
-                    Мы вконтакте
-                </a>
-            </li>
+          <li class="footer__item footer__contacts-item">
+            <svg class="footer__icon-box">
+              <use xlink:href="./img/svg/sprite.svg#mail"></use>
+            </svg>
+            <a href="mailto:info@ipsum228.com" class="footer__contacts-link">
+              info@ipsum228.com
+            </a>
+          </li>
+          <li class="footer__item footer__contacts-item">
+            <svg class="footer__icon-box">
+              <use xlink:href="./img/svg/sprite.svg#vk"></use>
+            </svg>
+            <a href="#" class="footer__contacts-link"> Мы вконтакте </a>
+          </li>
         </ul>
       </div>
     </footer>
