@@ -1,0 +1,104 @@
+.cards {
+  &__container {
+    @include container;
+    @include container-padding;
+    padding-top: em(20, $fz);
+    padding-bottom: em(40, $fz);
+  }
+
+  &__title {
+    text-align: center;
+  }
+}
+
+.card-example-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    $fz: 30;
+    font-size: em($fz, $fz_base);
+    color: var(--text-color-1);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    margin-bottom: em(30, $fz);
+    margin-top: 0;
+  }
+}
+
+.card-example {
+  padding: em(20 20 30 20, $fz);
+  border: 3px solid var(--accent-color-1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__wrapper {
+    min-width: em(560, $fz);
+    padding: em(20 20 25 20, $fz);
+    background-color: var(--accent-color-1);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: em(20, $fz);
+  }
+
+  &__title,
+  &__text {
+    $fz: 30;
+    font-size: em($fz, $fz_base);
+    line-height: 166%;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: em(20, $fz);
+    color: var(--text-color-1);
+  }
+
+  &__text {
+    color: var(--text-color-4);
+    display: block;
+    padding: em(8 20, $fz);
+    background-color: var(--primary-color-2);
+    border-radius: em(10, $fz);
+    &:not(:last-child) {
+      margin-bottom: em(25, $fz);
+    }
+  }
+
+  &__btn {
+    $fz: 20;
+    font-size: em($fz, $fz_base);
+    padding: em(10 40, $fz);
+    display: inline-block;
+    color: var(--text-color-3);
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+  }
+}
+
+.card-registration {
+  &__title {
+  }
+
+  &__text {
+  }
+
+  &__btn {
+  }
+}
+
+.card-registration-list {
+  &__item {
+  }
+}

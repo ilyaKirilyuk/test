@@ -1,0 +1,95 @@
+.section-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  $fz: 40;
+  font-size: em($fz, $fz_base);
+  line-height: 100%;
+  font-weight: 400;
+  color: var(--text-color-3);
+  font-family: Forum, sans-serif;
+  font-style: normal;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  padding-bottom: em(20, $fz);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: em(50, $fz);
+    height: 1px;
+    background-color: var(--secondary-color-1);
+  }
+}
+
+.about {
+  &__container {
+    @include container-padding;
+    @include container;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: em(20, $fz);
+    padding-bottom: em(40, $fz);
+  }
+
+  &__title {
+    margin-bottom: em(16, $fz);
+  }
+
+  &__subtitle {
+    $fz: 20;
+    font-size: em($fz, $fz_base);
+    color: var(--text-color-1);
+    text-align: center;
+    font-weight: 400;
+    line-height: 200%;
+  }
+
+  &__block {
+    width: 100%;
+  }
+}
+
+.about-content-list {
+  display: flex;
+  @include list-0;
+  gap: em(25, $fz);
+  justify-content: space-between;
+}
+
+.about-pagination-list {
+  @include list-0;
+  display: flex;
+  gap: em(10, $fz);
+  &__item {
+  }
+}
+
+.about-content-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__list {
+    margin-bottom: em(40, $fz);
+    width: 100%;
+  }
+}
+
+.about-pagination-bullet {
+  width: em(16, $fz);
+  height: em(16, $fz);
+  display: inline-block;
+  background-color: var(--secondary-color-1);
+  border-radius: 50%;
+
+  &--is-active {
+    background-color: var(--accent-color-1);
+  }
+}
+

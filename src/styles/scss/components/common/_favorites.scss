@@ -1,0 +1,206 @@
+.favorites {
+  &__container {
+    @include container;
+    @include container-padding;
+    padding-top: em(20, $fz);
+    padding-bottom: em(40, $fz);
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: em(16, $fz);
+  }
+  
+  &__form {
+    margin-bottom: em(40, $fz);
+  }
+}
+
+.favorites-form {
+  &__title {
+    $fz: 20;
+    font-size: em($fz, $fz_base);
+    color: var(--text-color-1);
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: em(40, $fz);
+  }
+}
+
+.favorites-form-list {
+  display: flex;
+  gap: em(90, $fz);
+  @include list-0;
+
+  &__item {
+  }
+}
+
+.favorites-form-input {
+  cursor: pointer;
+  display: flex;
+  $self: &;
+
+
+  &__text {
+    display: inline-block;
+    margin-left: em(20, $fz);
+  }
+
+  &__custom {
+    width: em(17, $fz);
+    height: em(17, $fz);
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid var(--secondary-color-1);
+    position: relative;
+
+    &::before {
+      content: '';
+      width: em(9, $fz);
+      height: em(9, $fz);
+      border-radius: 50%;
+      background-color: var(--secondary-color-1);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+
+
+  &__input {
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    height: 0;
+    width: 0;
+
+    &:checked {
+      & + #{$self}__custom::before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.favorites-cards-list {
+  @include list-0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: em(40, $fz);
+
+  &__item {
+    max-width: em(590, $fz);
+  }
+
+  &__card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.favorite-card {
+  &__wrapper {
+    border: 1px solid var(--primary-color-1);
+    padding: em(15 175 15 20, $fz);
+    margin-right: em(40, $fz);
+    position: relative;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: -1px;
+    right: em(-41, $fz);
+  }
+
+  &__title {
+    color: var(--text-color-1);
+    $fz: 20;
+    font-size: em($fz, $fz_base);
+    font-family: Forum, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    margin-top: 0;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: em(50, $fz);
+      height: 1px;
+      display: inline-block;
+      background-color: var(--accent-color-1);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__book,
+  &__auth {
+    $fz: 15;
+    font-size: em($fz, $fz_base);
+    color: var(--text-color-1);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 200%;
+    letter-spacing: 2px;
+  }
+
+  &__book {
+    text-transform: uppercase;
+  }
+
+  &__auth {
+    text-transform: capitalize;
+  }
+
+  &__description {
+    $fz: 15;
+    font-size: em($fz, $fz_base);
+    color: var(--text-color-1);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 266%;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    flex: 1 0 auto;
+  }
+
+  &__btn {
+    $fz: 10;
+    font-size: em($fz, $fz_base);
+    color: var(--text-color-3);
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    padding: em(9 27, $fz);
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--accent-color-1);
+      }
+    }
+  }
+}

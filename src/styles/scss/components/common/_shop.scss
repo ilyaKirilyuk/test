@@ -1,0 +1,113 @@
+.shop {
+  &__container {
+    @include container;
+    @include container;
+    padding-top: em(20, $fz);
+    padding-bottom: em(40, $fz);
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__text {
+    $fz: 20;
+    font-size: em($fz, $fz_base);
+    color: var(--text-color-1);
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%;
+    letter-spacing: 2px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.menu-block {
+  $self: &;
+
+  &__title {
+    $fz: 40;
+    font-size: em($fz, $fz_base);
+    color: var(--accent-color-1);
+    font-family: Forum;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 100% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin-top: 0;
+    margin-bottom: em(40, $fz);
+  }
+
+  &--mirrored {
+    #{$self} {
+      &__title {
+        text-align: right;
+      }
+    }
+
+    .menu-block-card {
+      &__text {
+        &:first-child {
+          display: flex;
+          justify-content: end;
+          &::after {
+            margin-right: em(60, $fz);
+            margin-left: em(60, $fz);
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-block-list {
+  @include list-0;
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: em(40, $fz);
+    }
+  }
+
+  &__card {
+    min-width: em(438, $fz);
+  }
+}
+
+.menu-block-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__text {
+    $fz: 20;
+    font-size: em($fz, $fz_base);
+    color: var(--text-color-1);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+      width: 100%;
+      &::after {
+        content: '';
+        display: inline-block;
+        width: em(100, $fz);
+        height: 1px;
+        background-color: var(--accent-color-1);
+        margin-right: em(60, $fz);
+        margin-left: auto;
+      }
+    }
+  }
+}

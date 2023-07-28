@@ -1,0 +1,40 @@
+.hero {
+  background-image: url("../../img/jpg/welcome.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: em(220, $fz);
+  padding-bottom: em(160, $fz);
+
+  &__container {
+    @include container;
+  }
+
+  &__block {
+    max-width: em(600, $fz);
+  }
+}
+
+.hero-title-block {
+  background-color: var(--secondary-color-1);
+  padding: em(35 40, $fz);
+
+  &__block {
+    display: block;
+  }
+
+  &__title {
+    $fz: 40;
+    font-size: em($fz, $fz_base);
+    color: var(--text-color-2);
+    text-align: center;
+    font-family: Forum, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+
+  }
+}
