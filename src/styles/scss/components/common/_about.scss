@@ -65,9 +65,6 @@
 .about-pagination-list {
   @include list-0;
   display: flex;
-  gap: em(10, $fz);
-  &__item {
-  }
 }
 
 .about-content-block {
@@ -82,14 +79,25 @@
 }
 
 .about-pagination-bullet {
-  width: em(16, $fz);
-  height: em(16, $fz);
-  display: inline-block;
-  background-color: var(--secondary-color-1);
-  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  padding: em(10, $fz);
+  font-size: 16px;
+  line-height: 0;
+
+  &::after {
+    content: '';
+    width: em(16, $fz);
+    height: em(16, $fz);
+    display: inline-block;
+    background-color: var(--secondary-color-1);
+    border-radius: 50%;
+  }
 
   &--is-active {
-    background-color: var(--accent-color-1);
+    &::after {
+      background-color: var(--accent-color-1);
+    }
   }
 }
 

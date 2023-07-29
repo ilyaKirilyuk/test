@@ -8,6 +8,12 @@
 
   &__title {
     text-align: center;
+    margin-bottom: em(40, $fz);
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -45,13 +51,12 @@
   }
 
   &__title,
-  &__text {
+  &__input {
     $fz: 30;
     font-size: em($fz, $fz_base);
     line-height: 166%;
     font-weight: 400;
     letter-spacing: 0.6px;
-
   }
 
   &__title {
@@ -60,14 +65,15 @@
     color: var(--text-color-1);
   }
 
-  &__text {
+  &__input {
     color: var(--text-color-4);
     display: block;
     padding: em(8 20, $fz);
     background-color: var(--primary-color-2);
     border-radius: em(10, $fz);
+
     &:not(:last-child) {
-      margin-bottom: em(25, $fz);
+      margin-bottom: em(11, $fz);
     }
   }
 
@@ -83,22 +89,66 @@
     line-height: normal;
     letter-spacing: 1px;
     border-radius: 2px;
-    border: 1px solid #0C0C0E;
+    border: 1px solid var(--secondary-color-1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--accent-color-1);
+      }
+    }
   }
 }
 
 .card-registration {
+  &__title,
+  &__text {
+    color: var(--text-color-1);
+    text-align: right;
+    font-weight: 400;
+    font-style: normal;
+  }
+
   &__title {
+    $fz: 30;
+    font-size: em($fz, $fz_base);
+    font-family: Forum;
+    line-height: normal;
+    letter-spacing: 0.6px;
   }
 
   &__text {
+    $fz: 20;
+    font-size: em($fz, $fz_base);
+    line-height: 200%;
+    letter-spacing: 0.4px;
+    max-width: em(456, $fz);
   }
 
   &__btn {
+    border-radius: 2px;
+    border: 1px solid var(--secondary-color-1);
+    padding: em(10, $fz);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--accent-color-1);
+      }
+    }
   }
 }
 
 .card-registration-list {
+  display: flex;
+  justify-content: flex-end;
+  @include list-0;
+
   &__item {
+    &:not(:last-child) {
+      margin-right: em(20, $fz);
+    }
   }
 }

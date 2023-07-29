@@ -1,0 +1,126 @@
+.footer {
+  background-color: var(--secondary-color-1);
+
+  &__container {
+    @include container;
+    @include container-padding;
+  }
+
+  &__head {
+    border-bottom: 1px solid var(--primary-color-2);
+  }
+}
+.footer-head {
+  padding-top: em(20, $fz);
+  padding-bottom: em(30, $fz);
+  display: flex;
+  justify-content: space-between;
+
+  &__place {
+    margin-top: 0;
+    margin-bottom: em(18, $fz);
+  }
+}
+.footer-place {
+  display: block;
+  text-decoration: none;
+  $self: &;
+
+  &__text {
+    $fz: 15;
+    color: var(--text-color-2);
+    font-size: em($fz, $fz_base);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 133%;
+    display: block;
+    transition: color 0.3s ease;
+  }
+  
+  @media (hover: hover) {
+    &:hover {
+        #{$self}__text {
+            color: var(--accent-color-1);
+        }
+    }
+  }
+}
+.footer-social-list {
+  display: flex;
+  @include list-0;
+  &__item {
+    &:not(:last-child) {
+      margin-right: em(15, $fz);
+    }
+  }
+}
+.footer-social-link {
+  transition: opacity 0.3s ease;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__icon {
+    width: em(24, $fz);
+    height: em(24, $fz);
+  }
+}
+.footer-date-list {
+  @include list-0;
+
+  &__date {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  &__item {
+    margin-bottom: em(10, $fz);
+  }
+}
+.footer-date {
+  &__text {
+    $fz: 15;
+    font-size: em($fz, $fz_base);
+    color: var(--text-color-2);
+    text-align: right;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 133%;
+    display: block;
+  }
+}
+.footer-body {
+  padding-top: em(40, $fz);
+  padding-bottom: em(44, $fz);
+  display: flex;
+  justify-content: space-between;
+
+  &__link {
+    $fz: 20;
+    color: var(--text-color-2);
+    font-size: em($fz, $fz_base);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--accent-color-1);
+      }
+    }
+  }
+}
+.footer-body-date {
+  $fz: 20;
+  color: var(--text-color-2);
+  font-size: em($fz, $fz_base);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 2px;
+}

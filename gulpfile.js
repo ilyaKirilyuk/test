@@ -1,6 +1,5 @@
 const { src, series, watch, dest } = require("gulp");
 const del = require("del");
-const htmlmin = require('gulp-htmlmin');
 const concat = require("gulp-concat");
 const sass = require("gulp-sass")(require("sass"));
 const autoprefixer = require("gulp-autoprefixer");
@@ -18,8 +17,8 @@ const fonts = () => {
   return src("src/fonts/**").pipe(dest("public/fonts"));
 };
 
-const videos = () => {
-  return src("src/videos/**").pipe(dest("public/videos"));
+const favicons = () => {
+  return src("src/favicons/**").pipe(dest("public/favicons"));
 };
 
 const images = () => {
@@ -58,7 +57,7 @@ const styles = () => {
 };
 
 const html = () => {
-  return src("src/**/*.html").pipe(htmlmin({ collapseWhitespace: true })).pipe(dest("public")).pipe(browserSync.stream());
+  return src("src/**/*.html").pipe(dest("public")).pipe(browserSync.stream());
 };
 
 const svgSprites = () => {
@@ -76,13 +75,13 @@ const svgSprites = () => {
 };
 
 const scripts = () => {
-  return src(["src/js/components/**/*.js", "src/js/main.js"])
+  return src(["src/js/components/**/*.js", "src/js/index.js"])
     .pipe(
       babel({
         presets: ["@babel/env"],
       })
     )
-    .pipe(concat("main.js"))
+    .pipe(concat("index.js"))
     .pipe(uglify().on("error", notify.onError()))
     .pipe(dest("public/js"))
     .pipe(browserSync.stream());
@@ -105,7 +104,7 @@ const watchFiles = () => {
 exports.default = series(
   clean,
   fonts,
-  videos,
+  favicons,
   resources,
   buildStyles,
   styles,
@@ -119,7 +118,7 @@ exports.default = series(
 exports.build = series(
   clean,
   fonts,
-  videos,
+  favicons,
   resources,
   buildStyles,
   styles,

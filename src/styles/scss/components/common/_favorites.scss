@@ -31,16 +31,23 @@
   display: flex;
   gap: em(90, $fz);
   @include list-0;
-
-  &__item {
-  }
 }
 
 .favorites-form-input {
   cursor: pointer;
   display: flex;
   $self: &;
-
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 200%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }  
 
   &__text {
     display: inline-block;
