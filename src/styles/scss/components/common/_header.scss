@@ -4,6 +4,8 @@
 
   &__logo {
     margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   &__navigation {
@@ -14,7 +16,52 @@
     display: flex;
     align-items: center;
     @include container;
-    @include container-padding;
+  }
+}
+
+.burger-menu-btn {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: em(10, $fz);
+  padding-left: 0;
+  padding-right: 0;
+  $self: &;
+
+  &::before,
+  &::after {
+    content: '';
+    transition: transform 0.3s ease;
+  }
+
+  &::before,
+  &::after,
+  &__icon {
+    width: em(55, $fz);
+    height: 2px;
+    background-color: var(--primary-color-2);
+    display: inline-block;
+  }
+
+  &__icon {
+    transition: opacity 0.3s ease;
+  }
+
+  &--is-active {
+    &::before {
+      transform: translateY(10px) rotate(45deg);
+    }
+
+    #{$self} {
+      &__icon {
+        opacity: 0;
+      }
+    }
+
+    &::after {
+      transform: translateY(-10px) rotate(-45deg);
+    }
   }
 }
 
@@ -36,6 +83,10 @@
 .navigation {
   display: flex;
   align-items: center;
+
+  &__btn {
+    display: none;
+  }
 }
 
 .nav-list {

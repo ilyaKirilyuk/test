@@ -9,7 +9,7 @@
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
-  width: em(1440, $fz);
+  max-width: em(1440, $fz);
 }
 
 @mixin container-padding {

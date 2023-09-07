@@ -1,0 +1,385 @@
+@media (max-width: 1400px) {
+  .favorites-cards-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .shop {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__menu {
+      width: fit-content;
+
+      &.menu-block {
+        &--mirrored {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  .contacts,
+  .cards {
+    &__wrapper {
+      flex-direction: column;
+    }
+  }
+
+  .cards {
+    &__example {
+      order: 1;
+    }
+
+    &__registration {
+      order: 2;
+    }
+  }
+
+  .card-registration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__text {
+      text-align: center;
+    }
+  }
+
+  .nav-list {
+    gap: em(15, $fz);
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav-wrapper {
+    position: fixed;
+    width: em(332, $fz);
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    overflow-y: auto;
+    background-color: var(--primary-color-1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+
+    &--is-active {
+      transform: translateX(0);
+    }
+  }
+
+  .nav-list {
+    padding-top: calc((var(--header-height) * 1px) + 10px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: em(30, $fz);
+  }
+
+  .navigation {
+    &__btn {
+      display: flex;
+      position: relative;
+      z-index: 101;
+    }
+  }
+
+  .header {
+    &__profile {
+      order: 1;
+      z-index: 101;
+      position: relative;
+      margin-right: em(40, $fz);
+    }
+
+    &__navigation {
+      order: 2;
+      margin-right: 0;
+    }
+  }
+
+  .hero {
+    &__block {
+      max-width: em(520, $fz);
+    }
+  }
+
+  .about {
+    &__title {
+      margin-bottom: em(9, $fz);
+    }
+
+    &__container {
+      padding-bottom: em(36, $fz);
+    }
+  }
+
+  .about-content-list {
+    justify-content: center;
+
+    &__item {
+      &:nth-child(2),
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+
+  .about-pagination-list {
+    &__item {
+      &:nth-child(4),
+      &:nth-child(5) {
+        display: inline-block;
+      }
+    }
+  }
+
+  .about-content-list-arrows {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+
+    &__arrow {
+      position: absolute;
+      left: em(70, $fz);
+      right: auto;
+      width: fit-content;
+      top: 48%;
+      background-color: transparent;
+      border: none;
+
+      &::before {
+        content: "";
+        border-left: 2px solid var(--primary-color-1);
+        border-bottom: 2px solid var(--primary-color-1);
+        display: inline-block;
+        height: em(8, $fz);
+        width: em(8, $fz);
+        transform: rotate(45deg);
+      }
+
+      &--right {
+        left: auto;
+        right: em(70, $fz);
+        &::before {
+          transform: rotate(-135deg);
+        }
+      }
+    }
+  }
+
+  .about-content-block {
+    position: relative;
+
+    &__list {
+      margin-bottom: em(14, $fz);
+    }
+  }
+
+  .about-pagination-bullet {
+    padding: em(5, $fz);
+  }
+
+  .favorites-form {
+    &__title {
+      margin-bottom: em(34, $fz);
+    }
+  }
+
+  .favorites-form-input {
+    align-items: center;
+    &__custom {
+      width: em(14, $fz);
+      height: em(14, $fz);
+    }
+
+    &__text {
+      $fz: 20;
+      font-size: em($fz, $fz_base);
+      margin-left: em(22, $fz);
+    }
+  }
+
+  .favorites {
+    &__form {
+      margin-bottom: em(38, $fz);
+    }
+  }
+
+  .favorite-card {
+    &__content {
+      margin-top: em(24, $fz);
+    }
+
+    &__book {
+      margin-bottom: em(10, $fz);
+    }
+
+    &__description {
+      margin-top: em(30, $fz);
+    }
+
+    &__btn {
+      $fz: 9;
+      font-size: em($fz, $fz_base);
+    }
+
+    &__wrapper {
+      padding-right: em(170, $fz);
+    }
+  }
+
+  .favorites-cards-list {
+    &__card {
+      min-height: em(555, $fz);
+    }
+  }
+
+  .shop {
+    &__text {
+      margin-top: em(30, $fz);
+      margin-bottom: em(34, $fz);
+    }
+
+    &__menu {
+      &:nth-child(1) {
+        margin-bottom: em(40, $fz);
+      }
+    }
+  }
+
+  .menu-block {
+    &--mirrored {
+      .menu-block-card {
+        &__text {
+          &:first-child::after {
+            margin-left: em(45, $fz);
+            margin-right: em(45, $fz);
+          }
+        }
+      }
+    }
+  }
+
+  .contacts-block {
+    &:nth-child(2) {
+      .contacts-block {
+        &__title {
+          margin-bottom: em(14, $fz);
+        }
+      }
+    }
+  }
+
+  .contacts-text-block {
+    &__block {
+      &:nth-child(2) {
+        margin-bottom: em(100, $fz);
+      }
+    }
+  }
+
+  .contacts {
+    &__map {
+      margin-left: em(15, $fz);
+      margin-right: em(15, $fz);
+    }
+  }
+  .card-example {
+    width: 100%;
+    max-width: em(600, $fz);
+    box-sizing: border-box;
+
+    &__title {
+      $fz: 26;
+      font-size: em($fz, $fz_base);
+      margin-bottom: em(24, $fz);
+    }
+
+    &__wrapper {
+      min-width: initial;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  .card-example {
+    padding-bottom: em(24, $fz);
+
+    &__input {
+        $fz: 28;
+        font-weight: 400;
+        font-size: em($fz, $fz_base);
+        font-family: Forum;
+        border: none;
+        padding-left: em(20, $fz);
+        padding-top: em(12, $fz);
+        padding-bottom: em(12, $fz);
+
+        &::placeholder {
+            font-weight: 400;
+        }
+    }
+  }
+
+  .card-registration {
+    &__title {
+        margin-top: em(14, $fz);
+        margin-bottom: em(20, $fz);
+    }
+
+    &__text {
+        margin-top: 0;
+        max-width: em(440, $fz);
+        margin-bottom: em(32, $fz);
+    }
+
+    &__btn {
+        padding-top: em(7, $fz);
+        padding-bottom: em(7, $fz);
+        min-width: em(90, $fz);
+    }
+  }
+
+  .card-registration-list {
+    &__item {
+        margin-right: em(6, $fz);
+    }
+  }
+
+  .footer-head {
+    padding-bottom: em(20, $fz);
+  }
+
+  .footer-body {
+    padding-top: em(44, $fz);
+  }
+
+  .favorites-form-list {
+    gap: initial;
+    justify-content: space-between;
+    max-width: em(700, $fz);
+  }
+}
+
+
+@media (max-width: 768px) {
+    .about-content-list-arrows {
+        &__arrow {
+          left: em(30, $fz);
+          right: auto;
+         
+          &--right {
+            left: auto;
+            right: em(30, $fz);
+          }
+        }
+      }
+}

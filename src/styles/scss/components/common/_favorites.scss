@@ -78,15 +78,17 @@
 
 
   &__input {
-    opacity: 0;
-    visibility: hidden;
+    display: none;
     position: relative;
-    height: 0;
-    width: 0;
+   
 
     &:checked {
       & + #{$self}__custom::before {
         opacity: 1;
+      }
+
+      & ~ #{$self}__text {
+        font-weight: 700;
       }
     }
   }
@@ -98,7 +100,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: em(40, $fz);
-
+              
   &__item {
     max-width: em(590, $fz);
   }
@@ -156,6 +158,7 @@
   &__content {
     display: flex;
     flex-direction: column;
+    margin-bottom: 0;
   }
 
   &__book,
@@ -209,5 +212,18 @@
         background-color: var(--accent-color-1);
       }
     }
+
+    &--is-disabled {
+      color: var(--accent-color-1);
+      border: 2px solid var(--accent-color-1);
+      cursor: initial;
+
+      @media (hover: hover) {
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
   }
+  
 }

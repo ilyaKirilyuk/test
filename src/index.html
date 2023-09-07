@@ -20,29 +20,34 @@
 <body class="main-page">
   <header class="header">
     <div class="header__container">
-      <h1 href="#" class="header__logo logo">
+      <h1 class="header__logo logo">
         <span class="logo__text"> Brooklyn Public Library </span>
       </h1>
       <nav class="header__navigation navigation">
-        <ul class="nav-list">
-          <li class="nav-list__item">
-            <a href="#about" class="nav-link"> About </a>
-          </li>
-          <li class="nav-list__item">
-            <a href="#favorites" class="nav-link"> Favorites </a>
-          </li>
-          <li class="nav-list__item">
-            <a href="#shop" class="nav-link"> Coffee shop </a>
-          </li>
-          <li class="nav-list__item">
-            <a href="#contacts" class="nav-link"> Contacts </a>
-          </li>
-          <li class="nav-list__item">
-            <a href="#cards" class="nav-link"> Library Card </a>
-          </li>
-        </ul>
+        <div class="nav-wrapper">
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a href="#about" class="nav-link"> About </a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#favorites" class="nav-link"> Favorites </a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#shop" class="nav-link"> Coffee shop </a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#contacts" class="nav-link"> Contacts </a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#cards" class="nav-link"> Library Card </a>
+            </li>
+          </ul>
+        </div>
+        <button class="navigation__btn burger-menu-btn" type="button" aria-label="burger menu">
+          <span class="burger-menu-btn__icon"></span>
+        </button>
       </nav>
-      <button class="profile-btn">
+      <button class="header__profile profile-btn">
         <svg class="profile-btn__icon">
           <use href="./img/svg/sprite.svg#profile"></use>
         </svg>
@@ -54,11 +59,11 @@
     <section class="hero">
       <div class="hero__container">
         <div class="hero__block hero-title-block">
-          <p class="hero-title-block__title">
+          <h2 class="hero-title-block__title">
             <span class="hero-title-block__block">Welcome</span>
             <span class="hero-title-block__block">to the Brooklyn</span>
             <span class="hero-title-block__block">Library</span>
-          </p>
+          </h2>
         </div>
       </div>
     </section>
@@ -73,13 +78,13 @@
         <div class="about__block about-content-block">
           <ul class="about-content-block__list about-content-list">
             <li class="about-content-list__item">
-              <img src="./img/jpg/one.jpg" alt="library">
+              <img class="about-content-list__img" src="./img/jpg/one.jpg" alt="library">
             </li>
             <li class="about-content-list__item">
-              <img src="./img/jpg/two.jpg" alt="library">
+              <img class="about-content-list__img" src="./img/jpg/two.jpg" alt="library">
             </li>
             <li class="about-content-list__item">
-              <img src="./img/jpg/three.jpg" alt="library">
+              <img class="about-content-list__img" src="./img/jpg/three.jpg" alt="library">
             </li>
           </ul>
           <ul class="about-content-block__pagination about-pagination-list">
@@ -95,7 +100,19 @@
               <button class="about-pagination-bullet about-pagination-bullet">
               </button>
             </li>
+            <li class="about-pagination-list__item">
+              <button class="about-pagination-bullet about-pagination-bullet">
+              </button>
+            </li>
+            <li class="about-pagination-list__item">
+              <button class="about-pagination-bullet about-pagination-bullet">
+              </button>
+            </li>
           </ul>
+          <div class="about-content-list-arrows">
+            <button class="about-content-list-arrows__arrow" type="button" aria-label="prev slide"></button>
+            <button class="about-content-list-arrows__arrow about-content-list-arrows__arrow--right" type="button" aria-label="next slide"></button>
+          </div>
         </div>
       </div>
     </section>
@@ -118,27 +135,27 @@
               <label class="favorites-form-input">
                 <input class="favorites-form-input__input" type="radio" name="time of the year">
                 <span class="favorites-form-input__custom"></span>
-                <span class="favorites-form-input__text"> Winter </span>
+                <span class="favorites-form-input__text"> Spring </span>
               </label>
             </li>
             <li class="favorites-form-list__item">
               <label class="favorites-form-input">
                 <input class="favorites-form-input__input" type="radio" name="time of the year">
                 <span class="favorites-form-input__custom"></span>
-                <span class="favorites-form-input__text"> Winter </span>
+                <span class="favorites-form-input__text"> Summer </span>
               </label>
             </li>
             <li class="favorites-form-list__item">
               <label class="favorites-form-input">
                 <input class="favorites-form-input__input" type="radio" name="time of the year">
                 <span class="favorites-form-input__custom"></span>
-                <span class="favorites-form-input__text"> Winter </span>
+                <span class="favorites-form-input__text"> Autumn </span>
               </label>
             </li>
           </ul>
         </form>
 
-        <ul class="favorites-cards-list">
+        <ul class="favorites__cards favorites-cards-list">
           <li class="favorites-cards-list__item">
             <div class="favorites-cards-list__card favorite-card">
               <div class="favorite-card__wrapper">
@@ -220,7 +237,7 @@
                 </p>
 
                 <img class="favorite-card__img" src="./img/jpg/book-4.jpg" alt="book">
-                <button class="favorite-card__btn">Buy</button>
+                <button disabled class="favorite-card__btn favorite-card__btn--is-disabled">Own</button>
               </div>
             </div>
           </li>
@@ -237,7 +254,7 @@
           coffee, and also you can try desserts from bakery.
         </p>
         <div class="shop__wrapper">
-          <div class="menu-block">
+          <div class="shop__menu menu-block">
             <h3 class="menu-block__title">Coffee & Tea</h3>
 
             <ul class="menu-block-list">
@@ -282,7 +299,7 @@
               </li>
             </ul>
           </div>
-          <div class="menu-block menu-block--mirrored">
+          <div class="shop__menu menu-block menu-block--mirrored">
             <h3 class="menu-block__title">Desserts & Cakes</h3>
 
             <ul class="menu-block-list">
@@ -357,12 +374,12 @@
               <ul class="contacts-list">
                 <li class="contacts-list__item">
                   <span class="contacts-list__text">Library Director:</span>
-                  <span class="contacts-list__text contacts-list__text--bold">Amanda Hirst</span>
+                  <a href="mailto:AmandaHirst@gmail.com" class="contacts-list__text contacts-list__text--bold">Amanda Hirst</a>
                 </li>
               </ul>
             </div>
           </div>
-          <img src="./img/jpg/map.jpg" alt="map">
+          <img class="contacts__map" src="./img/jpg/map.jpg" alt="map">
         </div>
       </div>
     </section>
@@ -370,7 +387,7 @@
       <div class="cards__container">
         <h2 class="cards__title section-title">Digital Library Cards</h2>
         <div class="cards__wrapper">
-          <div class="card-example-block">
+          <div class="cards__example card-example-block">
             <h3 class="card-example-block__title">Find your Library card</h3>
             <div class="card-example">
               <div class="card-example__wrapper">
@@ -381,7 +398,7 @@
               <button class="card-example__btn">Check the card</button>
             </div>
           </div>
-          <div class="card-registration">
+          <div class="cards__registration card-registration">
             <h3 class="card-registration__title">Get a reader card</h3>
             <p class="card-registration__text">
               You will be able to see a reader card after logging into account
@@ -415,21 +432,21 @@
           </a>
           <ul class="footer-social-list">
             <li class="footer-social-list__item">
-              <a href="#" class="footer-social-link" title="twitter">
+              <a href="https://twitter.com" class="footer-social-link" title="twitter">
                 <svg class="footer-social-link__icon">
                   <use href="./img/svg/sprite.svg#twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="footer-social-list__item">
-              <a href="#" class="footer-social-link" title="instagram">
+              <a href="https://instagram.com" class="footer-social-link" title="instagram">
                 <svg class="footer-social-link__icon">
                   <use href="./img/svg/sprite.svg#instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="footer-social-list__item">
-              <a href="#" class="footer-social-link" title="facebook">
+              <a href="https://facebook.com" class="footer-social-link" title="facebook">
                 <svg class="footer-social-link__icon">
                   <use href="./img/svg/sprite.svg#facebook"></use>
                 </svg>

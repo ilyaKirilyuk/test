@@ -60,11 +60,23 @@
   @include list-0;
   gap: em(25, $fz);
   justify-content: space-between;
+
+  &__img {
+    width: 100%;
+  }
 }
 
 .about-pagination-list {
   @include list-0;
   display: flex;
+
+  &__item {
+    &:nth-child(4),
+    &:nth-child(5) {
+      display: none;
+    }
+
+  }
 }
 
 .about-content-block {
@@ -101,3 +113,6 @@
   }
 }
 
+.about-content-list-arrows {
+  display: none;
+}
