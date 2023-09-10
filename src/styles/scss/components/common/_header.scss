@@ -122,10 +122,26 @@
   border: none;
   cursor: pointer;
   @include hover-opacity;
+  border-radius: 50%;
+  background-color: #fff;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &__icon {
-    width: 100%;
-    height: 100%;
+    width: 94%;
+    height: 94%;
     display: inline-block;
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: -5px;
+  }
+
+  &__text {
+    font-weight: 700;
+    text-transform: uppercase;
   }
 }

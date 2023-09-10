@@ -52,14 +52,21 @@
 
   &__block {
     width: 100%;
+    max-width: 100%;
   }
 }
 
 .about-content-list {
   display: flex;
   @include list-0;
-  gap: em(25, $fz);
   justify-content: space-between;
+
+  &__item {
+    padding-left: 10px;
+    padding-right: 10px;
+    flex: 1 0 calc((100% / var(--number-of-slides)) - 20px);
+  }
+  
 
   &__img {
     width: 100%;
@@ -84,9 +91,16 @@
   flex-direction: column;
   align-items: center;
 
+  &__wrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+
+
   &__list {
     margin-bottom: em(40, $fz);
     width: 100%;
+    transition: transform 0.3s ease;
   }
 }
 
@@ -96,6 +110,7 @@
   padding: em(10, $fz);
   font-size: 16px;
   line-height: 0;
+  cursor: pointer;
 
   &::after {
     content: '';
@@ -104,11 +119,20 @@
     display: inline-block;
     background-color: var(--secondary-color-1);
     border-radius: 50%;
+    transition: background-color 0.3s ease;
   }
 
   &--is-active {
     &::after {
       background-color: var(--accent-color-1);
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      &::after {
+        background-color: var(--accent-color-1);
+      }
     }
   }
 }

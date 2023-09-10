@@ -47,11 +47,48 @@
           <span class="burger-menu-btn__icon"></span>
         </button>
       </nav>
-      <button class="header__profile profile-btn">
-        <svg class="profile-btn__icon">
-          <use href="./img/svg/sprite.svg#profile"></use>
-        </svg>
-      </button>
+      <div class="header__profile header-profile">
+        <button class="profile-btn">
+          <svg class="profile-btn__icon">
+            <use href="./img/svg/sprite.svg#union"></use>
+          </svg>
+          <span class="profile-btn__text">
+          </span>
+        </button>
+        <div class="header-profile__menu profile-menu">
+          <span class="profile-menu__title">
+            Profile
+          </span>
+          <ul class="profile-menu__list profile-menu-list profile-menu-list--is-auth">
+            <li class="profile-menu-list__item">
+              <button type="button" class="profile-menu-list__btn" data-btn="login">
+                Log In
+              </button>
+            </li>
+
+            <li class="profile-menu-list__item">
+              <button type="button" class="profile-menu-list__btn" data-btn="register">
+                Register
+              </button>
+            </li>
+          </ul>
+
+          <ul class="profile-menu__list profile-menu-list profile-menu-list--is-register">
+            <li class="profile-menu-list__item">
+              <button type="button" class="profile-menu-list__btn" data-btn="my-profile">
+                My profile
+              </button>
+            </li>
+
+            <li class="profile-menu-list__item">
+              <button type="button" class="profile-menu-list__btn" data-btn="logout">
+                Log Out
+              </button>
+            </li>
+          </ul>
+
+        </div>
+      </div>
     </div>
   </header>
 
@@ -76,42 +113,52 @@
         </p>
 
         <div class="about__block about-content-block">
-          <ul class="about-content-block__list about-content-list">
-            <li class="about-content-list__item">
-              <img class="about-content-list__img" src="./img/jpg/one.jpg" alt="library">
-            </li>
-            <li class="about-content-list__item">
-              <img class="about-content-list__img" src="./img/jpg/two.jpg" alt="library">
-            </li>
-            <li class="about-content-list__item">
-              <img class="about-content-list__img" src="./img/jpg/three.jpg" alt="library">
-            </li>
-          </ul>
+          <div class="about-content-block__wrapper">
+            <ul class="about-content-block__list about-content-list">
+              <li class="about-content-list__item">
+                <img class="about-content-list__img" src="./img/jpg/one.jpg" alt="library">
+              </li>
+              <li class="about-content-list__item">
+                <img class="about-content-list__img" src="./img/jpg/two.jpg" alt="library">
+              </li>
+              <li class="about-content-list__item">
+                <img class="about-content-list__img" src="./img/jpg/three.jpg" alt="library">
+              </li>
+              <li class="about-content-list__item">
+                <img class="about-content-list__img" src="./img/jpg/four.jpg" alt="library">
+              </li>
+              <li class="about-content-list__item">
+                <img class="about-content-list__img" src="./img/jpg/five.jpg" alt="library">
+              </li>
+            </ul>
+          </div>
           <ul class="about-content-block__pagination about-pagination-list">
             <li class="about-pagination-list__item">
-              <button class="about-pagination-bullet about-pagination-bullet--is-active">
+              <button data-index="0" class="about-pagination-bullet about-pagination-bullet--is-active">
               </button>
             </li>
             <li class="about-pagination-list__item">
-              <button class="about-pagination-bullet about-pagination-bullet">
+              <button data-index="1" class="about-pagination-bullet about-pagination-bullet">
               </button>
             </li>
             <li class="about-pagination-list__item">
-              <button class="about-pagination-bullet about-pagination-bullet">
+              <button data-index="2" class="about-pagination-bullet about-pagination-bullet">
               </button>
             </li>
             <li class="about-pagination-list__item">
-              <button class="about-pagination-bullet about-pagination-bullet">
+              <button data-index="3" class="about-pagination-bullet about-pagination-bullet">
               </button>
             </li>
             <li class="about-pagination-list__item">
-              <button class="about-pagination-bullet about-pagination-bullet">
+              <button data-index="4" class="about-pagination-bullet about-pagination-bullet">
               </button>
             </li>
           </ul>
           <div class="about-content-list-arrows">
-            <button class="about-content-list-arrows__arrow" type="button" aria-label="prev slide"></button>
-            <button class="about-content-list-arrows__arrow about-content-list-arrows__arrow--right" type="button" aria-label="next slide"></button>
+            <button class="about-content-list-arrows__arrow" data-controller="prev" type="button"
+              aria-label="prev slide"></button>
+            <button class="about-content-list-arrows__arrow about-content-list-arrows__arrow--right"
+              data-controller="next" type="button" aria-label="next slide"></button>
           </div>
         </div>
       </div>
@@ -120,33 +167,33 @@
       <div class="favorites__container">
         <h2 class="favorites__title section-title">Favorites</h2>
 
-        <form class="favorites__form favorites-form" action="#">
+        <form class="favorites__form favorites-form" >
           <h3 class="favorites-form__title">Pick favorites of season</h3>
 
           <ul class="favorites-form-list">
             <li class="favorites-form-list__item">
-              <label class="favorites-form-input">
+              <label id="winter" class="favorites-form-input">
                 <input class="favorites-form-input__input" type="radio" name="time of the year" checked>
                 <span class="favorites-form-input__custom"></span>
                 <span class="favorites-form-input__text"> Winter </span>
               </label>
             </li>
             <li class="favorites-form-list__item">
-              <label class="favorites-form-input">
+              <label id="spring" class="favorites-form-input">
                 <input class="favorites-form-input__input" type="radio" name="time of the year">
                 <span class="favorites-form-input__custom"></span>
                 <span class="favorites-form-input__text"> Spring </span>
               </label>
             </li>
             <li class="favorites-form-list__item">
-              <label class="favorites-form-input">
+              <label id="summer" class="favorites-form-input">
                 <input class="favorites-form-input__input" type="radio" name="time of the year">
                 <span class="favorites-form-input__custom"></span>
                 <span class="favorites-form-input__text"> Summer </span>
               </label>
             </li>
             <li class="favorites-form-list__item">
-              <label class="favorites-form-input">
+              <label id="autumn" class="favorites-form-input">
                 <input class="favorites-form-input__input" type="radio" name="time of the year">
                 <span class="favorites-form-input__custom"></span>
                 <span class="favorites-form-input__text"> Autumn </span>
@@ -155,7 +202,8 @@
           </ul>
         </form>
 
-        <ul class="favorites__cards favorites-cards-list">
+        <ul data-id="winter"
+          class="favorites__cards favorites-cards-list favorites-cards-list--is-active favorites-cards-list--is-visible">
           <li class="favorites-cards-list__item">
             <div class="favorites-cards-list__card favorite-card">
               <div class="favorite-card__wrapper">
@@ -173,7 +221,7 @@
                 </p>
 
                 <img class="favorite-card__img" src="./img/jpg/book-1.jpg" alt="book">
-                <button class="favorite-card__btn">Buy</button>
+                <button data-btn="buy" class="favorite-card__btn">Buy</button>
               </div>
             </div>
           </li>
@@ -194,7 +242,7 @@
                   upstate New York and befriends a beautiful witch.
                 </p>
                 <img class="favorite-card__img" src="./img/jpg/book-2.jpg" alt="book">
-                <button class="favorite-card__btn">Buy</button>
+                <button data-btn="buy" class="favorite-card__btn">Buy</button>
               </div>
             </div>
           </li>
@@ -218,7 +266,7 @@
                 </p>
 
                 <img class="favorite-card__img" src="./img/jpg/book-3.jpg" alt="book">
-                <button class="favorite-card__btn">Buy</button>
+                <button data-btn="buy" class="favorite-card__btn">Buy</button>
               </div>
             </div>
           </li>
@@ -237,7 +285,256 @@
                 </p>
 
                 <img class="favorite-card__img" src="./img/jpg/book-4.jpg" alt="book">
-                <button disabled class="favorite-card__btn favorite-card__btn--is-disabled">Own</button>
+                <button data-btn="buy" class="favorite-card__btn">Buy</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul data-id="spring" class="favorites__cards favorites-cards-list">
+          <li class="favorites-cards-list__item">
+            <div class="favorites-cards-list__card favorite-card">
+              <div class="favorite-card__wrapper">
+                <h4 class="favorite-card__title">Staff Picks</h4>
+                <p class="favorite-card__content">
+                  <span class="favorite-card__book"> The Body</span>
+                  <span class="favorite-card__auth"> By Stephen King </span>
+                </p>
+                <p class="favorite-card__description">
+                  Powerful novel that takes you back to a nostalgic time, exploring both the beauty and danger and loss
+                  of innocence that is youth.
+                </p>
+
+                <img class="favorite-card__img" src="./img/jpg/book-5.jpg" alt="book">
+                <button data-btn="buy" class="favorite-card__btn">Buy</button>
+              </div>
+            </div>
+          </li>
+          <li class="favorites-cards-list__item">
+            <div class="favorites-cards-list__card favorite-card">
+              <div class="favorite-card__wrapper">
+                <h4 class="favorite-card__title">Staff Picks</h4>
+                <p class="favorite-card__content">
+                  <span class="favorite-card__book"> Carry: A Memoir of Survival on Stolen Land
+                  </span>
+                  <span class="favorite-card__auth">
+                    By Toni Jenson
+                  </span>
+                </p>
+                <p class="favorite-card__description">
+                  This memoir about the author's relationship with gun violence feels both expansive and intimate,
+                  resulting in a lyrical indictment of the way things are.
+                </p>
+                <img class="favorite-card__img" src="./img/jpg/book-6.jpg" alt="book">
+                <button data-btn="buy" class="favorite-card__btn">Buy</button>
+              </div>
+            </div>
+          </li>
+          <li class="favorites-cards-list__item">
+            <div class="favorites-cards-list__card favorite-card">
+              <div class="favorite-card__wrapper">
+                <h4 class="favorite-card__title">Staff Picks</h4>
+                <p class="favorite-card__content">
+                  <span class="favorite-card__book">
+                    Days of Distraction
+
+                  </span>
+                  <span class="favorite-card__auth"> By Alexandra Chang </span>
+                </p>
+                <p class="favorite-card__description">
+                  A sardonic view of Silicon Valley culture, a meditation on race, and a journal of displacement and
+                  belonging, all in one form-defying package of spare prose.
+                </p>
+
+                <img class="favorite-card__img" src="./img/jpg/book-7.jpg" alt="book">
+                <button data-btn="buy" class="favorite-card__btn">Buy</button>
+              </div>
+            </div>
+          </li>
+          <li class="favorites-cards-list__item">
+            <div class="favorites-cards-list__card favorite-card">
+              <div class="favorite-card__wrapper">
+                <h4 class="favorite-card__title">Staff Picks</h4>
+                <p class="favorite-card__content">
+                  <span class="favorite-card__book"> Dominicana
+                  </span>
+                  <span class="favorite-card__auth">By Angie Cruz</span>
+                </p>
+                <p class="favorite-card__description">
+                  A fascinating story of a teenage girl who marries a man twice her age with the promise to bring her to
+                  America. Her marriage is an opportunity for her family to eventually immigrate. For fans of Isabel
+                  Allende and Julia Alvarez.
+                </p>
+
+                <img class="favorite-card__img" src="./img/jpg/book-8.jpg" alt="book">
+                <button data-btn="buy" class="favorite-card__btn">Buy</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul data-id="summer" class="favorites__cards favorites-cards-list">
+          <li class="favorites-cards-list__item">
+            <div class="favorites-cards-list__card favorite-card">
+              <div class="favorite-card__wrapper">
+                <h4 class="favorite-card__title">Staff Picks</h4>
+                <p class="favorite-card__content">
+                  <span class="favorite-card__book"> Crude: A Memoir
+                  </span>
+                  <span class="favorite-card__auth"> By Pablo Fajardo & ​​Sophie Tardy-Joubert </span>
+                </p>
+                <p class="favorite-card__description">
+                  Drawing and color by Damien Roudeau | This book illustrates the struggles of a group of indigenous
+                  Ecuadoreans as they try to sue the ChevronTexaco company for damage their oil fields did to the Amazon
+                  and her people
+                </p>
+
+                <img class="favorite-card__img" src="./img/jpg/book-9.jpg" alt="book">
+                <button data-btn="buy" class="favorite-card__btn">Buy</button>
+              </div>
+            </div>
+          </li>
+          <li class="favorites-cards-list__item">
+            <div class="favorites-cards-list__card favorite-card">
+              <div class="favorite-card__wrapper">
+                <h4 class="favorite-card__title">Staff Picks</h4>
+                <p class="favorite-card__content">
+                  <span class="favorite-card__book"> Let My People Go Surfing
+                  </span>
+                  <span class="favorite-card__auth">
+                    By Yvon Chouinard
+                  </span>
+                </p>
+                <p class="favorite-card__description">
+                  Chouinard—climber, businessman, environmentalist—shares tales of courage and persistence from his
+                  experience of founding and leading Patagonia, Inc. Full title: Let My People Go Surfing: The Education
+                  of a Reluctant Businessman, Including 10 More Years of Business Unusual.
+                </p>
+                <img class="favorite-card__img" src="./img/jpg/book-10.jpg" alt="book">
+                <button data-btn="buy" class="favorite-card__btn">Buy</button>
+              </div>
+            </div>
+          </li>
+          <li class="favorites-cards-list__item">
+            <div class="favorites-cards-list__card favorite-card">
+              <div class="favorite-card__wrapper">
+                <h4 class="favorite-card__title">Staff Picks</h4>
+                <p class="favorite-card__content">
+                  <span class="favorite-card__book">
+                    The Octopus Museum: Poems
+
+                  </span>
+                  <span class="favorite-card__auth"> By Brenda Shaughnessy </span>
+                </p>
+                <p class="favorite-card__description">
+                  This collection of bold and scathingly beautiful feminist poems imagines what comes after our current
+                  age of environmental destruction, racism, sexism, and divisive politics.
+                </p>
+
+                <img class="favorite-card__img" src="./img/jpg/book-11.jpg" alt="book">
+                <button data-btn="buy" class="favorite-card__btn">Buy</button>
+              </div>
+            </div>
+          </li>
+          <li class="favorites-cards-list__item">
+            <div class="favorites-cards-list__card favorite-card">
+              <div class="favorite-card__wrapper">
+                <h4 class="favorite-card__title">Staff Picks</h4>
+                <p class="favorite-card__content">
+                  <span class="favorite-card__book"> Shark Dialogues: A Novel
+                  </span>
+                  <span class="favorite-card__auth"> By Kiana Davenport </span>
+                </p>
+                <p class="favorite-card__description">
+                  An epic saga of seven generations of one family encompasses the tumultuous history of Hawaii as a
+                  Hawaiian woman gathers her four granddaughters together in an erotic tale of villains and dreamers,
+                  queens and revolutionaries, lepers and healers.
+                </p>
+
+                <img class="favorite-card__img" src="./img/jpg/book-12.jpg" alt="book">
+                <button data-btn="buy" class="favorite-card__btn">Buy</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul data-id="autumn" class="favorites__cards favorites-cards-list">
+          <li class="favorites-cards-list__item">
+            <div class="favorites-cards-list__card favorite-card">
+              <div class="favorite-card__wrapper">
+                <h4 class="favorite-card__title">Staff Picks</h4>
+                <p class="favorite-card__content">
+                  <span class="favorite-card__book"> Casual Conversation
+                  </span>
+                  <span class="favorite-card__auth"> By Renia White </span>
+                </p>
+                <p class="favorite-card__description">
+                  White's impressive debut collection takes readers through and beyond the concepts of conversation and
+                  the casual - both what we say to each other and what we don't, examining the possibilities around how
+                  we construct and communicate identity.
+                </p>
+
+                <img class="favorite-card__img" src="./img/jpg/book-13.jpg" alt="book">
+                <button data-btn="buy" class="favorite-card__btn">Buy</button>
+              </div>
+            </div>
+          </li>
+          <li class="favorites-cards-list__item">
+            <div class="favorites-cards-list__card favorite-card">
+              <div class="favorite-card__wrapper">
+                <h4 class="favorite-card__title">Staff Picks</h4>
+                <p class="favorite-card__content">
+                  <span class="favorite-card__book"> The Great Fire
+                  </span>
+                  <span class="favorite-card__auth">
+                    By Lou Ureneck
+                  </span>
+                </p>
+                <p class="favorite-card__description">
+                  The harrowing story of an ordinary American and a principled Naval officer who, horrified by the
+                  burning of Smyrna, led an extraordinary rescue effort that saved a quarter of a million refugees from
+                  the Armenian Genocide
+                </p>
+                <img class="favorite-card__img" src="./img/jpg/book-14.jpg" alt="book">
+                <button data-btn="buy" class="favorite-card__btn">Buy</button>
+              </div>
+            </div>
+          </li>
+          <li class="favorites-cards-list__item">
+            <div class="favorites-cards-list__card favorite-card">
+              <div class="favorite-card__wrapper">
+                <h4 class="favorite-card__title">Staff Picks</h4>
+                <p class="favorite-card__content">
+                  <span class="favorite-card__book">
+                    Rickey: The Life and Legend
+
+                  </span>
+                  <span class="favorite-card__auth"> By Howard Bryant </span>
+                </p>
+                <p class="favorite-card__description">
+                  With the fall rolling around, one can't help but think of baseball's postseason coming up! And what
+                  better way to prepare for it than reading the biography of one of the game's all-time greatest
+                  performers, the Man of Steal, Rickey Henderson?
+                </p>
+
+                <img class="favorite-card__img" src="./img/jpg/book-15.jpg" alt="book">
+                <button data-btn="buy" class="favorite-card__btn">Buy</button>
+              </div>
+            </div>
+          </li>
+          <li class="favorites-cards-list__item">
+            <div class="favorites-cards-list__card favorite-card">
+              <div class="favorite-card__wrapper">
+                <h4 class="favorite-card__title">Staff Picks</h4>
+                <p class="favorite-card__content">
+                  <span class="favorite-card__book"> Slug: And Other Stories
+                  </span>
+                  <span class="favorite-card__auth"> By Megan Milks </span>
+                </p>
+                <p class="favorite-card__description">
+                  Exes Tegan and Sara find themselves chained together by hairballs of codependency. A father and child
+                  experience the shared trauma of giving birth to gods from their wounds.
+                </p>
+
+                <img class="favorite-card__img" src="./img/jpg/book-16.jpg" alt="book">
+                <button data-btn="buy" class="favorite-card__btn">Buy</button>
               </div>
             </div>
           </li>
@@ -374,7 +671,8 @@
               <ul class="contacts-list">
                 <li class="contacts-list__item">
                   <span class="contacts-list__text">Library Director:</span>
-                  <a href="mailto:AmandaHirst@gmail.com" class="contacts-list__text contacts-list__text--bold">Amanda Hirst</a>
+                  <a href="mailto:AmandaHirst@gmail.com" class="contacts-list__text contacts-list__text--bold">Amanda
+                    Hirst</a>
                 </li>
               </ul>
             </div>
@@ -392,13 +690,54 @@
             <div class="card-example">
               <div class="card-example__wrapper">
                 <h4 class="card-example__title">Brooklyn Public Library</h4>
-                <input type="text" class="card-example__input" placeholder="Reader's name">
-                <input type="text" class="card-example__input" placeholder="Card number">
+                <input type="text" class="card-example__input" placeholder="Reader's name" id="card-user">
+                <input type="text" class="card-example__input" placeholder="Card number" id="card-number">
               </div>
               <button class="card-example__btn">Check the card</button>
+              <ul class="card-example__stats statistic-list">
+                <li class="statistic-list__item">
+                  <div class="statistic-card">
+                    <div class="statistic-card__title">
+                      visits
+                    </div>
+                    <svg class="statistic-card__icon">
+                      <use href="./img/svg/sprite.svg#union"></use>
+                    </svg>
+                    <div class="statistic-card__number">
+                      23
+                    </div>
+                  </div>
+                </li>
+                <li class="statistic-list__item">
+                  <div class="statistic-card">
+                    <div class="statistic-card__title">
+                      bonuses
+                    </div>
+                    <svg class="statistic-card__icon">
+                      <use href="./img/svg/sprite.svg#star"></use>
+                    </svg>
+                    <div class="statistic-card__number">
+                      1240
+                    </div>
+                  </div>
+                </li>
+                <li class="statistic-list__item">
+                  <div class="statistic-card">
+                    <div class="statistic-card__title">
+                      visits
+                    </div>
+                    <svg class="statistic-card__icon">
+                      <use href="./img/svg/sprite.svg#book"></use>
+                    </svg>
+                    <div class="statistic-card__number">
+                      2
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="cards__registration card-registration">
+          <div class="cards__registration card-registration card-registration--is-auth">
             <h3 class="card-registration__title">Get a reader card</h3>
             <p class="card-registration__text">
               You will be able to see a reader card after logging into account
@@ -406,10 +745,22 @@
             </p>
             <ul class="card-registration-list">
               <li class="card-registration-list__item">
-                <button class="card-registration__btn">Sign Up</button>
+                <button class="card-registration__btn" data-btn="register">Sign Up</button>
               </li>
               <li class="card-registration-list__item">
-                <button class="card-registration__btn">Log in</button>
+                <button class="card-registration__btn" data-btn="login">Log in</button>
+              </li>
+            </ul>
+          </div>
+          <div class="cards__registration card-registration card-registration--is-register">
+            <h3 class="card-registration__title">Visit your profile</h3>
+            <p class="card-registration__text">
+              With a digital library card you get free access to the Library’s wide array of digital resources including
+              e-books, databases, educational resources, and more.
+            </p>
+            <ul class="card-registration-list">
+              <li class="card-registration-list__item">
+                <button class="card-registration__btn" data-btn="profile">Profile</button>
               </li>
             </ul>
           </div>
@@ -492,6 +843,245 @@
       </div>
     </div>
   </footer>
+
+  <div class="popups">
+    <div class="popup-login" data-popup="login">
+      <div class="popup-login__wrapper">
+        <button class="popup-login__close close-btn" data-close="login">
+          <svg class="close-btn__icon">
+            <use href="./img/svg/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <span class="popup-login__title popup-title">
+          Login
+        </span>
+        <form class="popup-form" >
+          <label class="popup-form__input popup-input">
+            <span class="popup-input__text">E-mail or readers card</span>
+            <input class="popup-input__input" type="text" required id="username">
+          </label>
+          <label class="popup-form__input popup-input">
+            <span class="popup-input__text">Password</span>
+            <input class="popup-input__input" type="password"  required id="password">
+          </label>
+          <button type="submit" class="button" data-btn="auth">
+            Log In
+          </button>
+        </form>
+        <div class="popup-login__underform popup-underform">
+          <span class="popup-underform__text">
+            Don’t have an account?
+          </span>
+          <button type="button" class="popup-underform__btn" data-btn="register">
+            Register
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="popup-login" data-popup="register">
+      <div class="popup-login__wrapper">
+        <button class="popup-login__close close-btn" data-close="register">
+          <svg class="close-btn__icon">
+            <use href="./img/svg/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <span class="popup-login__title popup-title">
+          Register
+        </span>
+        <form class="popup-form" >
+          <label class="popup-form__input popup-input">
+            <span class="popup-input__text">First name</span>
+            <input class="popup-input__input" type="text" required id="register-first-name">
+          </label>
+          <label class="popup-form__input popup-input">
+            <span class="popup-input__text">Last name</span>
+            <input class="popup-input__input" type="text" required id="register-last-name">
+          </label>
+          <label class="popup-form__input popup-input">
+            <span class="popup-input__text">E-mail</span>
+            <input class="popup-input__input" type="email" required id="register-email">
+          </label>
+          <label class="popup-form__input popup-input">
+            <span class="popup-input__text">Password</span>
+            <input class="popup-input__input" type="password" required id="register-password"> 
+          </label>
+          <button type="button" class="button" data-btn="sign-up">
+            Sign Up
+          </button>
+        </form>
+        <div class="popup-login__underform popup-underform">
+          <span class="popup-underform__text">
+            Already have an account?
+          </span>
+          <button type="button" class="popup-underform__btn" data-btn="login">
+            Login
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup-buy" data-popup="buy">
+      <div class="popup-buy__wrapper">
+        <div class="popup-buy__header">
+          <span class="popup-buy__title">
+            Buy a library card
+          </span>
+          <button class="popup-buy__close close-btn close-btn--light" data-close="buy">
+            <svg class="close-btn__icon">
+              <use href="./img/svg/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="popup-buy__container">
+          <form  class="popup-buy__form popup-form">
+            <label class="popup-form__input popup-input">
+              <span class="popup-input__text">Bank card number</span>
+              <input class="popup-input__input" type="number" required>
+            </label>
+            <label class="popup-form__input popup-input">
+              <span class="popup-input__text">Expiration code</span>
+              <div class="popup-input__wrapper">
+                <input class="popup-input__input popup-input__input--size-s" type="number" required>
+                <input class="popup-input__input popup-input__input--size-s" type="number" required>
+              </div>
+            </label>
+            <label class="popup-form__input popup-input">
+              <span class="popup-input__text">CVC</span>
+              <div class="popup-input__wrapper">
+                <input class="popup-input__input popup-input__input--size-s" type="number" required>
+              </div>
+            </label>
+            <label class="popup-form__input popup-input">
+              <span class="popup-input__text">Cardholder name</span>
+              <input class="popup-input__input" type="text" required>
+            </label>
+            <label class="popup-form__input popup-input">
+              <span class="popup-input__text">Postal code</span>
+              <input class="popup-input__input" type="number" required>
+            </label>
+            <label class="popup-form__input popup-input">
+              <span class="popup-input__text">City / Town</span>
+              <input class="popup-input__input" type="text" required>
+            </label>
+
+            <div class="popup-form__wrapper">
+              <button type="submit" class="button">
+                Sign Up
+              </button>
+              <span class="popup-form__number">
+                $ 25.00
+              </span>
+            </div>
+          </form>
+          <p class="popup-buy__description">
+            If you are live, work, attend school, or pay property taxes in New York State, you can get a $25 digital
+            library card right now using this online form. Visitors to New York State can also use this form to apply
+            for a temporary card.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup-profile" data-popup="profile">
+      <div class="popup-profile__wrapper">
+        <div class="popup-profile__container">
+          <div class="popup-profile__side popup-profile-side">
+            <div class="popup-profile-side__icon">
+              JD
+            </div>
+            <div class="popup-profile-side__text">
+              John Doe
+            </div>
+          </div>
+          <div class="popup-profile__content">
+            <span class="popup-profile__title">
+              My profile
+            </span>
+            <button class="popup-profile__close close-btn" data-close="profile">
+              <svg class="close-btn__icon">
+                <use href="./img/svg/sprite.svg#close"></use>
+              </svg>
+            </button>
+
+            <ul class="popup-profile__list statistic-list">
+              <li class="statistic-list__item">
+                <div class="statistic-card">
+                  <div class="statistic-card__title">
+                    visits
+                  </div>
+                  <svg class="statistic-card__icon">
+                    <use href="./img/svg/sprite.svg#union"></use>
+                  </svg>
+                  <div class="statistic-card__number">
+                    23
+                  </div>
+                </div>
+              </li>
+              <li class="statistic-list__item">
+                <div class="statistic-card">
+                  <div class="statistic-card__title">
+                    bonuses
+                  </div>
+                  <svg class="statistic-card__icon">
+                    <use href="./img/svg/sprite.svg#star"></use>
+                  </svg>
+                  <div class="statistic-card__number">
+                    1240
+                  </div>
+                </div>
+              </li>
+              <li class="statistic-list__item">
+                <div class="statistic-card">
+                  <div class="statistic-card__title">
+                    visits
+                  </div>
+                  <svg class="statistic-card__icon">
+                    <use href="./img/svg/sprite.svg#book"></use>
+                  </svg>
+                  <div class="statistic-card__number">
+                    2
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <div class="popup-profile__rented statistic-rented">
+              <div class="statistic-rented__title">
+                Rented books
+              </div>
+              <ul class="statistic-rented-list">
+                <li class="statistic-rented-list__item">
+                  <span class="statistic-rented-list__text">
+                    The Last Queen, Clive Irving
+                  </span>
+                </li>
+                <li class="statistic-rented-list__item">
+                  <span class="statistic-rented-list__text">
+                    Dominicana, Angie Cruz
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="statistic-footer">
+              <span class="statistic-footer__text">
+                Card number
+              </span>
+              <span class="statistic-footer__numer">
+                F00234030
+              </span>
+              <button class="statistic-footer__btn statistic-footer-btn" >
+                <svg class="statistic-footer-btn__icon">
+                  <use href="./img/svg/sprite.svg#copy"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

@@ -1,0 +1,138 @@
+// profile-menu
+.main-page {
+  .card-registration,
+  .profile-menu-list {
+    &--is-register {
+      display: none;
+    }
+  }
+
+  .card-example {
+    &__stats {
+      display: none;
+    }
+  }
+
+  &--is-auth {
+    .card-example {
+      &__btn {
+        display: none;
+      }
+
+      &__input {
+        color: #bb945f;
+      }
+
+      &__stats {
+        display: flex;
+      }
+    }
+
+    .profile-btn__icon {
+      display: none;
+    }
+
+    .card-registration--is-auth,
+    .profile-menu-list--is-auth {
+      display: none;
+    }
+
+    .card-registration,
+    .profile-menu-list {
+      &--is-register {
+        display: flex;
+      }
+    }
+  }
+}
+
+.header-profile {
+  position: relative;
+
+  &__menu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+  }
+}
+
+.header-profile {
+  &__menu {
+  }
+}
+.profile-menu {
+  background-color: var(--primary-color-2);
+  box-sizing: border-box;
+  min-width: 80px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+
+  &--is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__title {
+    display: block;
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 133.333% */
+    text-align: center;
+    padding-bottom: 5px;
+    position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      width: 50%;
+      left: 25%;
+      height: 1px;
+      background-color: #bb945f;
+    }
+  }
+}
+.profile-menu-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  gap: 10px;
+
+  &__btn {
+    background-color: transparent;
+    display: block;
+    text-align: center;
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 133.333% */
+    border: none;
+    padding: 0;
+    transition: color 0.3s ease;
+    cursor: pointer;
+
+    @media (hover: hover) {
+      &:hover {
+        color: #bb945f;
+      }
+    }
+  }
+}
